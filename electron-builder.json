@@ -1,10 +1,10 @@
 {
-  "appId": "com.steemconnect.app",
+  "appId": "com.smokeconnect.app",
   "protocols": [
     {
-      "name": "steem",
+      "name": "smoke",
       "schemes": [
-        "steem"
+        "smoke"
       ]
     }
   ],
@@ -17,8 +17,8 @@
   "publish": [
     {
       "provider": "github",
-      "owner": "steemscript",
-      "repo": "steemconnect",
+      "owner": "herbncrypto",
+      "repo": "smokeconnect",
       "private": false
     }
   ]
