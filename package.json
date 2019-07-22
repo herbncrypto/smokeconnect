@@ -32,7 +32,7 @@
     "primer": "^11.0.0",
     "query-string": "^6.5.0",
     "serve-static": "^1.14.0",
-    "steem-uri": "^0.1.1",
+    "smoke-uri": "^0.1.1",
     "triplesec": "^4.0.3",
     "url-parse": "^1.4.7",
     "vue": "^2.6.10",
@@ -63,7 +63,7 @@
   },
   "contributors": [
     "Fabien Marino <fabien@bonustrack.co> (https://github.com/bonustrack)",
-    "Wiktor Tkaczyński <wiktor.tkaczynski@gmail.com> (https://github.com/Sekhmet)",
+    "herbncrypto",
     "Johan Nordberg (https://github.com/jnordberg)"
   ],
   "repository": {
