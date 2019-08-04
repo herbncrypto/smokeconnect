@@ -129,11 +129,11 @@ if (!gotLock) {
     });
 
     process.argv.forEach(arg => {
-      if (/steem:\/\//.test(arg)) {
+      if (/smoke:\/\//.test(arg)) {
         openedUrl = arg;
       }
     });
   });
 
-  app.setAsDefaultProtocolClient('steem');
+  app.setAsDefaultProtocolClient('smoke');
 }
