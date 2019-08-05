@@ -2,7 +2,7 @@
 import { has, snakeCase } from 'lodash';
 import urlParse from 'url-parse';
 import qs from 'query-string';
-import { encodeOps, decode } from 'steem-uri';
+import { encodeOps, decode } from 'smoke-uri';
 import operations from '@/helpers/operations.json';
 
 export const REQUEST_ID_PARAM = 'requestId';
@@ -22,7 +22,7 @@ export function jsonParse(input) {
   }
 }
 
-/** Parse error message from Steemd response */
+/** Parse error message from Smoked response */
 export function getErrorMessage(error) {
   let errorMessage = '';
   if (has(error, 'stack[0].format')) {
@@ -45,7 +45,7 @@ export function getVestsToSP(properties) {
   );
 }
 
-export function legacyUriToParsedSteemUri(uri) {
+export function legacyUriToParsedSmokeUri(uri) {
   let parsed;
   try {
     const url = urlParse(uri);
@@ -74,7 +74,7 @@ function processValue(schema, key, value, { vestsToSP }) {
       if (realValue.indexOf('VESTS') !== -1) return `${parseFloat(realValue).toFixed(6)} VESTS`;
       if (realValue.indexOf('SP') !== -1)
         return `${(parseFloat(realValue) / vestsToSP).toFixed(6)} VESTS`;
-      if (realValue.indexOf('STEEM') !== -1) return `${parseFloat(realValue).toFixed(3)} STEEM`;
+      if (realValue.indexOf('SMOKE') !== -1) return `${parseFloat(realValue).toFixed(3)} SMOKE`;
       if (realValue.indexOf('SBD') !== -1) return `${parseFloat(realValue).toFixed(3)} SBD`;
       return realValue;
     default:
