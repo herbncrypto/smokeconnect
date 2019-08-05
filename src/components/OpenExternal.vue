@@ -1,7 +1,7 @@
 <template>
   <div class="flash mb-4 overflow-hidden">
     <div class="mb-3">
-      We recommend you to use the SteemConnect desktop app. If you don't have this, you can download
+      We recommend you to use the SmokeConnect desktop app (COMING SOON!). Once available, you can download
       it from the
       <a :href="pkg.homepage" target="_blank">official site</a>.
     </div>
@@ -24,7 +24,7 @@ export default {
   methods: {
     openUriScheme() {
       /* eslint-disable no-underscore-dangle */
-      if (this.withChrome && window._steemconnect) window._steemconnect.sign(this.uri);
+      if (this.withChrome && window._smokeconnect) window._smokeconnect.sign(this.uri);
       else document.location = this.uri;
       /* eslint-enable no-underscore-rangle */
     },
