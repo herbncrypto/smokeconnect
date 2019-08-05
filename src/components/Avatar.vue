@@ -2,7 +2,7 @@
   <span
     class="avatar"
     :style="{
-      'background-image': `url(https://steemitimages.com/u/${username}/avatar/small`,
+      'background-image': `url(https://smoke.io/profileimage/${username}`,
       width: `${this.size}px`,
       height: `${this.size}px`,
     }"
