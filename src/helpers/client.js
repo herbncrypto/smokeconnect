@@ -1,9 +1,9 @@
-import { Client } from 'dsteem';
-import * as steemuri from 'steem-uri';
+import { Client } from 'dsmoke';
+import * as smokeuri from 'smoke-uri';
 
 const CLIENT_OPTIONS = { timeout: 15000 };
 
-let rawClient = new Client('https://api.steemit.com', CLIENT_OPTIONS);
+let rawClient = new Client('https://rpc.smoke.io', CLIENT_OPTIONS);
 
 const handler = {
   get(target, prop) {
