@@ -99,7 +99,7 @@ export default {
       scope: ['login', 'posting', 'offline'].includes(this.$route.query.scope)
         ? this.$route.query.scope
         : 'login',
-      uri: `steem://login-request/${this.$route.params.clientId}${buildSearchParams(this.$route)}`,
+      uri: `smoke://login-request/${this.$route.params.clientId}${buildSearchParams(this.$route)}`,
     };
   },
   computed: {
