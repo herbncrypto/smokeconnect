@@ -6,12 +6,12 @@ const SETTINGS_KEY = 'settings';
 
 const state = {
   properties: {},
-  steemAddressPrefix: '',
+  smokeAddressPrefix: '',
   chainId: '',
   language: 'en',
   timeout: '20',
   theme: 'white',
-  address: 'https://api.steemit.com',
+  address: 'https://rpc.smoke.io',
 };
 
 const mutations = {
@@ -19,8 +19,8 @@ const mutations = {
     Vue.set(_state, 'properties', result);
   },
   saveConfig(_state, config) {
-    Vue.set(_state, 'steemAddressPrefix', config.STEEM_ADDRESS_PREFIX);
-    Vue.set(_state, 'chainId', config.STEEM_CHAIN_ID);
+    Vue.set(_state, 'smokeAddressPrefix', config.SMOKE_ADDRESS_PREFIX);
+    Vue.set(_state, 'chainId', config.SMOKE_CHAIN_ID);
   },
   saveSettings(_state, settings) {
     Vue.set(_state, 'language', settings.language || _state.language);
