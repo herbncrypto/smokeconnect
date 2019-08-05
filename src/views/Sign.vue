@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import * as steemuri from 'steem-uri';
+import * as smokeuri from 'smoke-uri';
 import { mapActions } from 'vuex';
 import { resolveTransaction } from '@/helpers/client';
 import { getAuthority } from '@/helpers/auth';
@@ -58,7 +58,7 @@ import {
   isWeb,
   isChromeExtension,
   getVestsToSP,
-  legacyUriToParsedSteemUri,
+  legacyUriToParsedSmokeUri,
   getLowestAuthorityRequired,
   processTransaction,
   buildSearchParams,
@@ -76,7 +76,7 @@ export default {
       failed: false,
       error: false,
       isWeb: isWeb(),
-      uri: `steem://sign/${this.$route.params.pathMatch}${buildSearchParams(this.$route)}`,
+      uri: `smoke://sign/${this.$route.params.pathMatch}${buildSearchParams(this.$route)}`,
       requestId: this.$route.query[REQUEST_ID_PARAM],
       authority: getAuthority(this.$route.query.authority),
     };
@@ -107,9 +107,9 @@ export default {
     parseUri(uri) {
       let parsed;
       try {
-        parsed = steemuri.decode(uri);
+        parsed = smokeuri.decode(uri);
       } catch (err) {
-        parsed = legacyUriToParsedSteemUri(uri);
+        parsed = legacyUriToParsedSmokeUri(uri);
         if (!parsed) {
           this.uriIsValid = false;
         }
@@ -161,7 +161,7 @@ export default {
 
       // TODO: Handle Chrome extension & desktop app redirect.
       if (this.parsed.params.callback && isWeb()) {
-        window.location = steemuri.resolveCallback(this.parsed.params.callback, {
+        window.location = smokeuri.resolveCallback(this.parsed.params.callback, {
           sig,
           id: confirmation.id || undefined,
           block: confirmation.block_num || undefined,
