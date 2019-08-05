@@ -21,7 +21,7 @@
     }
   },
   "delegate_vesting_shares": {
-    "name": "Delegate Steem Power",
+    "name": "Delegate Smoke Power",
     "authority": "active",
     "schema": {
       "delegator": {
@@ -121,7 +121,7 @@
       },
       "fee": {
         "type": "amount",
-        "defaultValue": "0.000 STEEM"
+        "defaultValue": "0.000 SMOKE"
       },
       "extensions": {
         "type": "array",
