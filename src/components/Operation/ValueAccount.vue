@@ -1,5 +1,5 @@
 <template>
-  <a :href="'https://steemit.com/@' + value" target="_blank">
+  <a :href="'https://smoke.io/@' + value" target="_blank">
     <Avatar :username="value" :size="22" />
     {{ value }}
     <span class="iconfont icon-link-external"></span>
