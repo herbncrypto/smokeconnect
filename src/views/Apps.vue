@@ -66,7 +66,7 @@
 import client from '@/helpers/client';
 import { jsonParse } from '@/helpers/utils';
 
-const ORACLE_USERNAME = 'steemscript';
+const ORACLE_USERNAME = 'herbncrypto';
 const ORACLE_PERMLINK = 'top-apps';
 
 export default {
